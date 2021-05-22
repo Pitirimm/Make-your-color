@@ -17,28 +17,23 @@ class ViewController: UIViewController {
     var green: CGFloat = 0.0
     var blue: CGFloat = 0.0
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-      
-    }
 
     @IBAction func redSliderMove(_ sender: UISlider) {
         red = CGFloat(sender.value)
-        redLabel.text = "\(red)"
+        redLabel.text = String(format: "%.2f", red)
         colorArea.backgroundColor = UIColor.init(red: red, green: green, blue: blue, alpha: 1)
         
     }
     
     @IBAction func greenSliderMove(_ sender: UISlider) {
         green = CGFloat(sender.value)
-        greenLabel.text = "\(green)"
+        greenLabel.text = String(format: "%.2f", green)
         colorArea.backgroundColor = UIColor.init(red: red, green: green, blue: blue, alpha: 1)
     }
     
     @IBAction func blueSliderMove(_ sender: UISlider) {
         blue = CGFloat(sender.value)
-        blueLabel.text = "\(blue)"
+        blueLabel.text = String(format: "%.2f", blue)
         colorArea.backgroundColor = UIColor.init(red: red, green: green, blue: blue, alpha: 1)
     }
 }
